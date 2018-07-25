@@ -18,3 +18,5 @@ def is_divisible_both_divisor(n, divisor1, divisor2):
     :param divisor2:
     :return:
     '''
+    return n % divisor1 == 0 and n % divisor2 == 0
+
