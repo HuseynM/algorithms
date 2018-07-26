@@ -16,14 +16,13 @@
       <file leaf-file-name="operators_and_expressions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operators_and_expressions/operators_and_expressions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+            <state relative-caret-position="678">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#27#196#0" />
                 <element signature="e#257#524#0" />
                 <element signature="e#557#736#0" />
                 <element signature="e#767#952#0" />
-                <element signature="e#986#1068#0" />
               </folding>
             </state>
           </provider>
@@ -159,7 +158,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -172,21 +171,19 @@
             <element signature="e#257#524#0" />
             <element signature="e#557#736#0" />
             <element signature="e#767#952#0" />
-            <element signature="e#986#1068#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/operators_and_expressions/operators_and_expressions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+        <state relative-caret-position="678">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#27#196#0" />
             <element signature="e#257#524#0" />
             <element signature="e#557#736#0" />
             <element signature="e#767#952#0" />
-            <element signature="e#986#1068#0" />
           </folding>
         </state>
       </provider>

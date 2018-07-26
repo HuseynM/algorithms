@@ -57,7 +57,7 @@ def sum_of_digits(n):
     return sum
 
 
-def reverse_number(n):
+def reverse(n):
     '''
     Prints on the console the number in reversed order: dcba
     :param n:
@@ -71,3 +71,4 @@ def reverse_number(n):
         n = n // 10
     return reversed
 
+print(reverse(1234))
