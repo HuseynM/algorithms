@@ -58,7 +58,7 @@ def sum_of_digits(n):
 
 def reverse(n):
     '''
-    Prints on the console the number in reversed order: abcd-dcba
+    Prints on the console the number in reversed order: abcd->dcba
     :param n:
     :return:
     '''
@@ -86,6 +86,11 @@ def get_digit_count(n):
 
 
 def put_last_in_first(n):
+    '''
+    Puts the last digit in the first position: abcd->dabc
+    :param n:
+    :return:
+    '''
     i = get_digit_count(n)
     _local = n % 10
     _local *= pow(10, i - 1)
