@@ -20,6 +20,7 @@ def is_divisible_both_divisor(n, divisor1, divisor2):
     '''
     return n % divisor1 == 0 and n % divisor2 == 0
 
+
 def check_third_digit(n):
     '''
     Write an expression that looks for a given integer if its third digit (right
@@ -28,7 +29,7 @@ def check_third_digit(n):
     :param n:
     :return:
     '''
-    return (n//100) % 10 == 7
+    return (n // 100) % 10 == 7
 
 
 def check_third_bit(n):
@@ -41,4 +42,17 @@ def check_third_bit(n):
     '''
     return 0 if (n & 0B100) == 0 else 1
 
+
+def sum_of_digits(n):
+    '''
+     Calculates the sum of the digits (in our example 2+0+1+1 = 4)
+    :param n:
+    :return:
+    '''
+    sum = 0
+    while n > 0:
+        sum += n % 10
+        n = n // 10
+
+    return sum
 
