@@ -3,7 +3,6 @@ def is_odd_or_even(n):
      Write an expression that checks whether an integer is odd or even.
     :param n:
     :return:
-
     0001 - 1
     '''
     return "even" if (n & 1) == 0 else "odd"
@@ -59,7 +58,7 @@ def sum_of_digits(n):
 
 def reverse(n):
     '''
-    Prints on the console the number in reversed order: dcba
+    Prints on the console the number in reversed order: abcd-dcba
     :param n:
     :return:
     '''
@@ -71,4 +70,26 @@ def reverse(n):
         n = n // 10
     return reversed
 
-print(reverse(1234))
+
+def get_digit_count(n):
+    '''
+    Get count of given number
+    :param n:
+    :return:
+    '''
+
+    i = 0
+    while n > 0:
+        n = n // 10
+        i = i + 1
+    return i
+
+
+def put_last_in_first(n):
+    i = get_digit_count(n)
+    _local = n % 10
+    _local *= pow(10, i - 1)
+    _local += n // 10
+
+    return _local
+
