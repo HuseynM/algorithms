@@ -16,8 +16,15 @@
       <file leaf-file-name="operators_and_expressions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operators_and_expressions/operators_and_expressions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="525">
+              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+              <folding>
+                <element signature="e#27#196#0" />
+                <element signature="e#257#524#0" />
+                <element signature="e#557#736#0" />
+                <element signature="e#767#952#0" />
+                <element signature="e#986#1068#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,7 +135,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18020834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18020834" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -152,13 +159,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/operators_and_expressions/operators_and_expressions.py</url>
-          <line>46</line>
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -166,13 +167,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="e#27#196#0" />
+            <element signature="e#257#524#0" />
+            <element signature="e#557#736#0" />
+            <element signature="e#767#952#0" />
+            <element signature="e#986#1068#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/operators_and_expressions/operators_and_expressions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="525">
+          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+          <folding>
+            <element signature="e#27#196#0" />
+            <element signature="e#257#524#0" />
+            <element signature="e#557#736#0" />
+            <element signature="e#767#952#0" />
+            <element signature="e#986#1068#0" />
+          </folding>
         </state>
       </provider>
     </entry>
