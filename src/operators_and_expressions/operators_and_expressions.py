@@ -112,4 +112,18 @@ def exchange_digits(n):
 
     return n
 
-print(exchange_digits(145963))
+
+def check_p_bit_position_n(n, p):
+    '''
+    We are given a number n and a position p. Write a sequence of
+    operations that prints the value of the bit on the position p in the
+    number (0 or 1). Example: n=35, p=5 -> 1. Another example: n=35,
+    p=6 -> 0.
+    :param n:
+    :param p:
+    :return:
+    '''
+
+    bit = n & (1 << (p-1))
+    return 0 if bit == 0 else 1
+
