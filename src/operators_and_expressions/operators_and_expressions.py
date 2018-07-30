@@ -92,3 +92,24 @@ def put_last_in_first(n):
     _local += n // 10
 
     return _local
+
+
+def exchange_digits(n):
+    '''
+    Exchanges the second and the third digits: abcd->acbd (right to left)
+    :param n:
+    :return:
+    '''
+
+    second_digit = (n // 10) % 10
+    third_digit = (n // 100) % 10
+
+    n = n - third_digit * 100
+    n = n + second_digit * 100
+
+    n = n - second_digit * 10
+    n = n + third_digit * 10
+
+    return n
+
+print(exchange_digits(145963))
