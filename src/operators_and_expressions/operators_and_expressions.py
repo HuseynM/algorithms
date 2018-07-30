@@ -200,3 +200,27 @@ def exchange_values_of_bits(n):
     n = change_bit_position(n, _26b, 4)
 
     return n
+
+def exchange_bits(n):
+    '''
+    :param n:
+    :return:
+    '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
