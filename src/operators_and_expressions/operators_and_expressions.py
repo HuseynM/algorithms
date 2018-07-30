@@ -173,4 +173,30 @@ def check_prime(n):
             return False
     return True
 
-print(check_prime(15))
+
+def exchange_values_of_bits(n):
+    '''
+     Write a program that exchanges the values of the bits on positions
+    3, 4 and 5 with bits on positions 24, 25 and 26 of a given 32-bit unsigned
+    integer.
+    :param n:
+    :return:
+    '''
+
+    _3b = 0 if (n & (1 << 2)) == 0 else 1
+    _4b = 0 if (n & (1 << 3)) == 0 else 1
+    _5b = 0 if (n & (1 << 4)) == 0 else 1
+
+    _24b = 0 if (n & (1 << 23)) == 0 else 1
+    _25b = 0 if (n & (1 << 24)) == 0 else 1
+    _26b = 0 if (n & (1 << 25)) == 0 else 1
+
+    n = change_bit_position(n, _3b, 23)
+    n = change_bit_position(n, _4b, 24)
+    n = change_bit_position(n, _5b, 25)
+
+    n = change_bit_position(n, _24b, 2)
+    n = change_bit_position(n, _25b, 3)
+    n = change_bit_position(n, _26b, 4)
+
+    return n
