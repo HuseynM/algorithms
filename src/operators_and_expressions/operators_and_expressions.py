@@ -156,12 +156,21 @@ def change_bit_position(n, v, p):
     return n | (1 << (p - 1)) if v == 1 else n & ~(1 << (p - 1))
 
 
+def check_prime(n):
+    '''
+    Write a program that checks if a given number n (1 < n < 100) is a
+    prime number (i.e. it is divisible without remainder only to itself and 1).
+    :param n:
+    :return:
+    '''
 
+    if n == 1:
+        return False
+    if n == 2:
+        return True
+    for i in range(2, n // 2):
+        if n % i == 0:
+            return False
+    return True
 
-
-
-
-
-
-
-
+print(check_prime(15))
