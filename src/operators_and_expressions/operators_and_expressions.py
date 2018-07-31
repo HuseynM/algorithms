@@ -141,7 +141,7 @@ def check_bit_position(n, p):
     return False if bit == 0 else True
 
 
-def change_bit_position(n, v, p):
+def change_bit_value(n, v, p):
     '''
     We are given the number n, the value v (v = 0 or 1) and the position p.
     write a sequence of operations that changes the value of n, so the bit on
@@ -206,21 +206,3 @@ def exchange_bits(n):
     :param n:
     :return:
     '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
