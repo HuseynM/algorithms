@@ -18,6 +18,8 @@ class NumberLength(Enum):
     DOUBLE_DIGIT = 1 << 1
     THREE_DIGIT = SINGLE_DIGIT | DOUBLE_DIGIT
     FOUR_DIGIT = 1 << 2
+    FIVE_DIGIT = 5
+    SIX_DIGIT = 6
 
 
 def get_word_by_position(value, position):
@@ -31,6 +33,8 @@ def get_word_by_position(value, position):
         return single_digit[value - 1] + ' yüz'
     elif position == NumberLength.FOUR_DIGIT:
         return single_digit[value - 1] + ' min'
+    elif position == NumberLength.FIVE_DIGIT:
+        return double_digit[value - 1] + ' min'
 
 
 def convert_num_to_words(value):
@@ -81,6 +85,23 @@ def convert_num_to_words(value):
 
         return _last_word + ' ' + _third_word + ' ' + _second_word + ' ' + _first_word
 
-    return ''
+    elif _len == NumberLength.FIVE_DIGIT.value:
+        _first_digit = value % 10
+        _second_digit = (value // 10) % 10
+        _third_digit = (value // 100) % 10
+        _four_digit = (value // 1000) % 10
+        _last_digit = value // 10000
 
+        _first_word = get_word_by_position(_first_digit, NumberLength.SINGLE_DIGIT)
+        _second_word = get_word_by_position(_second_digit, NumberLength.DOUBLE_DIGIT)
+        _third_word = get_word_by_position(_third_digit, NumberLength.THREE_DIGIT)
+        _four_word = get_word_by_position(_four_digit, NumberLength.FOUR_DIGIT)
+
+        if _four_digit == 0:
+            _last_word = get_word_by_position(_last_digit, NumberLength.FIVE_DIGIT)
+        else:
+            _last_word = get_word_by_position(_last_digit, NumberLength.DOUBLE_DIGIT)
+
+        return _last_word + ' ' + _four_word + ' ' + _third_word + ' ' + _second_word + ' ' + _first_word
+    return ''
 
