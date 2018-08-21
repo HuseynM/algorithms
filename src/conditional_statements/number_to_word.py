@@ -21,6 +21,7 @@ class NumberLength(Enum):
     FIVE_DIGIT = 5
     SIX_DIGIT = 6
     SEVEN_DIGIT = 7
+    EIGHT_DIGIT = 8
 
 
 def get_word_by_position(value, position):
@@ -84,7 +85,7 @@ def convert_num_to_words(value):
         if _last_digit == 1:
             _last_word = 'min'
 
-        if _third_word == 1:
+        if _third_digit == 1:
             _third_word = 'yüz'
 
         return _last_word + ' ' + _third_word + ' ' + _second_word + ' ' + _first_word
@@ -130,3 +131,4 @@ def convert_num_to_words(value):
     return ''
 
 
+print(convert_num_to_words(1001110))
