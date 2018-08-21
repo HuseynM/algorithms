@@ -20,6 +20,7 @@ class NumberLength(Enum):
     FOUR_DIGIT = 1 << 2
     FIVE_DIGIT = 5
     SIX_DIGIT = 6
+    SEVEN_DIGIT = 7
 
 
 def get_word_by_position(value, position):
@@ -38,6 +39,9 @@ def get_word_by_position(value, position):
 
 
 def convert_num_to_words(value):
+    if value == 0:
+        return 'sıfır'
+
     _len = length(value)
 
     if _len == NumberLength.SINGLE_DIGIT.value:
@@ -103,5 +107,16 @@ def convert_num_to_words(value):
             _last_word = get_word_by_position(_last_digit, NumberLength.DOUBLE_DIGIT)
 
         return _last_word + ' ' + _four_word + ' ' + _third_word + ' ' + _second_word + ' ' + _first_word
+
+    elif _len == NumberLength.SIX_DIGIT.value:
+        first_three = convert_num_to_words(value // 1000)
+        last_three = convert_num_to_words(value % 1000)
+
+        if last_three == 'sıfır':
+            last_three = ''
+
+        return first_three + ' min ' + last_three
     return ''
 
+
+print(convert_num_to_words(500000))
