@@ -21,6 +21,8 @@ class NumberLength(Enum):
 
 
 def get_word_by_position(value, position):
+    if value == 0:
+        return ''
     if position == NumberLength.SINGLE_DIGIT:
         return single_digit[value - 1]
     elif position == NumberLength.DOUBLE_DIGIT:
@@ -32,14 +34,12 @@ def get_word_by_position(value, position):
 
 
 def convert_num_to_words(value):
-    result = None
-
     _len = length(value)
 
-    if _len == NumberLength.SINGLE_DIGIT:
+    if _len == NumberLength.SINGLE_DIGIT.value:
         return get_word_by_position(value, NumberLength.SINGLE_DIGIT)
 
-    elif _len == NumberLength.DOUBLE_DIGIT:
+    elif _len == NumberLength.DOUBLE_DIGIT.value:
         _first_digit = value // 10
         _last_digit = value % 10
 
@@ -48,7 +48,7 @@ def convert_num_to_words(value):
 
         return _first_word + ' ' + _last_word
 
-    elif _len == NumberLength.THREE_DIGIT:
+    elif _len == NumberLength.THREE_DIGIT.value:
         _first_digit = value // 100
         _second_digit = (value % 100) // 10
         _last_digit = (value % 100) % 10
@@ -62,7 +62,7 @@ def convert_num_to_words(value):
 
         return _first_word + ' ' + _second_word + ' ' + _last_word
 
-    elif _len == NumberLength.FOUR_DIGIT:
+    elif _len == NumberLength.FOUR_DIGIT.value:
         _first_digit = value % 10
         _second_digit = (value // 10) % 10
         _third_digit = (value // 100) % 10
@@ -82,3 +82,5 @@ def convert_num_to_words(value):
         return _last_word + ' ' + _third_word + ' ' + _second_word + ' ' + _first_word
 
     return ''
+
+
