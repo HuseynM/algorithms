@@ -51,6 +51,25 @@ def find_greatest(a):
     return _local
 
 
+def find_all_greatest(a):
+    '''
+    Write a program that finds all greatest numbers of given array.
+    :param a:
+    :return:
+    '''
+    max = a[0]
+    count = 0
+
+    for i in a:
+        if i == max:
+            count += 1
+        elif i > max:
+            max = i
+            count = 1
+
+    return count
+
+
 def find_smallest(a):
     '''
     Write a program that finds the smallest of given array.
