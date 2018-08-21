@@ -109,14 +109,24 @@ def convert_num_to_words(value):
         return _last_word + ' ' + _four_word + ' ' + _third_word + ' ' + _second_word + ' ' + _first_word
 
     elif _len == NumberLength.SIX_DIGIT.value:
-        first_three = convert_num_to_words(value // 1000)
-        last_three = convert_num_to_words(value % 1000)
+        _first_three = convert_num_to_words(value // 1000)
+        _last_three = convert_num_to_words(value % 1000)
 
-        if last_three == 'sıfır':
-            last_three = ''
+        if _last_three == 'sıfır':
+            _last_three = ''
 
-        return first_three + ' min ' + last_three
+        return _first_three + ' min ' + _last_three
+
+    elif _len == NumberLength.SEVEN_DIGIT.value:
+        _last_digit = value // 1000000
+        _last_word = get_word_by_position(_last_digit, NumberLength.SINGLE_DIGIT)
+        _last_word += ' milyon'
+        _last_six = convert_num_to_words(value % 1000000)
+
+        if _last_six == 'sıfır':
+            _last_six = ''
+
+        return _last_word + ' ' + _last_six
     return ''
 
 
-print(convert_num_to_words(500000))
