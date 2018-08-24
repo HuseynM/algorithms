@@ -45,6 +45,7 @@ def find_smallest():
 
     return min
 
+
 def find_largest():
     '''
     Write a program that reads from the console a series of integers and
@@ -55,18 +56,33 @@ def find_largest():
     arr = list()
     max = 0
 
-    for i in range(0,n):
+    for i in range(0, n):
         j = int(input('Enter value: '))
         arr.append(j)
-        if max< j:
+        if max < j:
             max = j
 
     return max
 
 
+def fibonacci(n):
+    a = 0
+    b = 1
+
+    for i in range(0, n):
+        temp = a
+        a = b
+        b = temp + b
+
+    return a
 
 
+def sum_of_fibonacci(n):
+    sum = 0
+    for i in range(0, n):
+        sum += fibonacci(i)
+
+    return sum
 
 
-
-
+print(sum_of_fibonacci(8))
