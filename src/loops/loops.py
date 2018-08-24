@@ -27,16 +27,46 @@ def print_not_divisible_by_3_7():
 
 
 def find_smallest():
+    '''
+    Write a program that reads from the console a series of integers and
+    prints the smallest of them.
+    :return:
+    '''
+
     n = int(input('Enter count: '))
     arr = []
-    max = 0
+    min = 0
 
     for i in range(0, n):
         j = int(input('Enter value: '))
         arr.append(j)
-        if max > j:
+        if min > j:
+            min = j
+
+    return min
+
+def find_largest():
+    '''
+    Write a program that reads from the console a series of integers and
+    prints the largest of them.
+    :return:
+    '''
+    n = int(input('Enter count: '))
+    arr = list()
+    max = 0
+
+    for i in range(0,n):
+        j = int(input('Enter value: '))
+        arr.append(j)
+        if max< j:
             max = j
 
     return max
+
+
+
+
+
+
 
 
