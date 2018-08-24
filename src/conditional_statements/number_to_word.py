@@ -130,5 +130,3 @@ def convert_num_to_words(value):
         return _last_word + ' ' + _last_six
     return ''
 
-
-print(convert_num_to_words(1001110))
