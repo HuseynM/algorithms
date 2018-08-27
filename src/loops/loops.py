@@ -85,4 +85,18 @@ def sum_of_fibonacci(n):
     return sum
 
 
-print(sum_of_fibonacci(8))
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+def factorial_1(n, k):
+    if n > k > 1:
+        return factorial(n) / factorial(k)
+
+
+def factorial_2(n, k):
+    if n > k > 1:
+        return factorial(n) * factorial(k) / factorial(n - k)
