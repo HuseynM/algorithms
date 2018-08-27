@@ -103,10 +103,11 @@ def factorial(n):
     :param n:
     :return:
     '''
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
+    f = 1
+    while n >= 1:
+        f *= n
+        n -= 1
+    return f
 
 
 def factorial_1(n, k):
@@ -130,3 +131,4 @@ def factorial_2(n, k):
     '''
     if n > k > 1:
         return factorial(n) * factorial(k) / factorial(n - k)
+
